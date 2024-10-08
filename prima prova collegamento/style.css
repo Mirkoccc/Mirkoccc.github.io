@@ -1,0 +1,225 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-image: url(img/background.jpeg);
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.logo{
+  height: 150px;
+}
+
+.logo > img{
+  width:170px;
+  height: 80px;
+  position:absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: 15px;
+}
+
+.canaliSocial{
+  text-align: center;
+}
+
+.logoInstagram, .logoFacebook {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.imgLogo{
+  width: 150px;
+  height: 40px;
+  margin: 0 20px;
+}
+
+/* Imposta il menu per scomparire di default */
+.hidden {
+  display: none;
+}
+
+nav {
+  padding: 5px;
+  display: inline-block;
+  position: absolute;
+  top:0px;
+  left: 10px;
+}
+
+.hamburger {
+  font-size: 30px;
+  color: black;
+  cursor: pointer;
+}
+
+/* Stile del hamburger menu */
+.menu {
+  list-style-type: none;
+  padding: 0;
+  max-width: 100px;
+  list-style-type: none;
+  /* position: absolute;
+  top: 50px;  Posiziona il menu sotto la barra dell'hamburger */
+  width: 100%;
+  /* background-color: rgba(0, 0, 0, 0.9); Sfondo scuro semi-trasparente */
+  z-index: 1000; /* Porta il menu sopra tutto */
+}
+
+.menu li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.menu li a:hover {
+  background-blend-mode: exclusion;
+  background: lightgrey;
+}
+
+/* Stile del sub-menu */
+.has-submenu {
+  position: relative;
+}
+
+.has-submenu a {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.has-submenu .submenu {
+  display: none;
+  position: absolute;
+  top: -178%;
+  left: 100%; /* Il sub-menu appare a destra del genitore */
+  padding: 10px;
+  list-style-type: none;
+  min-width: 150px;
+  z-index: 1001; /* Assicurati che sia sopra */
+}
+
+.has-submenu:hover .submenu {
+  display: block; /* Mostra il sub-menu al passaggio del mouse */
+}
+
+.submenu li a {
+  text-align: left;
+  padding: 10px;
+  color: black;
+}
+
+.submenu li a:hover {
+  background-color: #999;
+}
+
+.riquadro{
+  float: left;
+  margin: 20px;
+  width: calc(100% / 4 - 40px);
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+}
+
+.riquadro > img{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 3px solid black;
+}
+
+.riquadro > video{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+    border: 3px solid black;
+}
+
+.img-modal:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 50%;
+  max-width: 100%;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)}
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}

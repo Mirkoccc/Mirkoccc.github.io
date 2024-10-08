@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>mysite</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <!-- logo e hamburger menu -->
+    <header>
+      <div class="logo">
+        <img src="img/logo.jpg" alt="">
+      </div>
+
+      <div class="canaliSocial">
+
+        <span class="logoInstagram">
+          <a href="https://www.instagram.com/mirkocaccavone" target="_blank">
+            <img  class="imgLogo" src="img/logoInstagram.jpeg">
+          </a>
+        </span>
+
+        <span class="logoFacebook">
+          <a href="https://www.facebook.com/mirkocaccavone" target="_blank">
+            <img class="imgLogo" src="img/logoFacebook.png">
+          </a>
+          </span>
+
+        </div>
+      </div>
+    </header>
+
+    <!-- hamburger menu -->
+    <nav>
+      <div class="hamburger" onclick="toggleMenu()">
+        &#9776; <!-- Simbolo dell'hamburger -->
+      </div>
+
+      <ul id="menu" class="menu hidden">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Chi Siamo</a></li>
+        <li><a href="#services">Servizi</a></li>
+        <!-- Item con sub-menu -->
+        <li class="has-submenu">
+          <a href="#contact">Contatti &#x25B6;</a> <!-- Freccia verso destra -->
+          <ul class="submenu">
+            <li><a href="mailto:mirkocaccavone@virgilio.it">Email</a></li>
+            <li><a href="tel:+393463231336">Telefono</a></li>
+            <li><a href="#piazza rotonda">Indirizzo</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- contenuto delle foto -->
+    <main>
+
+      <div class="container">
+
+        <div class="riquadro">
+          <img class="img-modal" src="img/foto1.JPEG" alt="Istanbul">
+        </div>
+        <div class="riquadro">
+          <img class="img-modal" src="img/foto2.JPEG" alt="Moschea Blu">
+        </div>
+        <div class="riquadro">
+          <img class="img-modal" src="img/foto3.JPEG" alt="Pamukkale">
+        </div>
+        <div class="riquadro">
+          <img class="img-modal" src="img/foto4.JPEG" alt="Bosforo">
+        </div>
+        <div class="riquadro">
+          <img class="img-modal" src="img/foto5.JPEG" alt="Bozcaada">
+        </div>
+        <div class="riquadro">
+          <img class="img-modal" src="img/foto6.JPEG" alt="Cumhuriyet Mh">
+        </div>
+        <div class="riquadro">
+          <img class="img-modal" src="img/foto7.JPEG" alt="Behram">
+        </div>
+        <div class="riquadro">
+          <img class="img-modal" src="img/foto8.JPEG" alt="">
+        </div>
+        <div class="riquadro">
+          <video controls>
+            <source src="img/video1.MP4" type="video/mp4"> dervisci
+            <source src="video1.ogg" type="video/ogg">
+            Your browser does not support HTML video.
+          </video>
+        </div>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="img01">
+          <div id="caption"></div>
+        </div>
+
+      </div>
+    </main>
+
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
